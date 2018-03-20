@@ -1,0 +1,10 @@
+C:\DropTables\Scheduleator\Implementations\bin\Debug\Implementations.dll
+C:\DropTables\Scheduleator\Implementations\bin\Debug\Implementations.pdb
+C:\DropTables\Scheduleator\Implementations\bin\Debug\Interfaces.dll
+C:\DropTables\Scheduleator\Implementations\bin\Debug\Newtonsoft.Json.dll
+C:\DropTables\Scheduleator\Implementations\bin\Debug\Interfaces.pdb
+C:\DropTables\Scheduleator\Implementations\bin\Debug\Newtonsoft.Json.xml
+C:\DropTables\Scheduleator\Implementations\obj\Debug\Implementations.csprojResolveAssemblyReference.cache
+C:\DropTables\Scheduleator\Implementations\obj\Debug\Implementations.csproj.CoreCompileInputs.cache
+C:\DropTables\Scheduleator\Implementations\obj\Debug\Implementations.dll
+C:\DropTables\Scheduleator\Implementations\obj\Debug\Implementations.pdb

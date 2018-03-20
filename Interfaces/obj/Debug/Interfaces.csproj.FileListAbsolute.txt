@@ -1,0 +1,8 @@
+C:\DropTables\Scheduleator\Interfaces\bin\Debug\Interfaces.dll
+C:\DropTables\Scheduleator\Interfaces\bin\Debug\Interfaces.pdb
+C:\DropTables\Scheduleator\Interfaces\bin\Debug\Newtonsoft.Json.dll
+C:\DropTables\Scheduleator\Interfaces\bin\Debug\Newtonsoft.Json.xml
+C:\DropTables\Scheduleator\Interfaces\obj\Debug\Interfaces.csproj.CoreCompileInputs.cache
+C:\DropTables\Scheduleator\Interfaces\obj\Debug\Interfaces.dll
+C:\DropTables\Scheduleator\Interfaces\obj\Debug\Interfaces.pdb
+C:\DropTables\Scheduleator\Interfaces\obj\Debug\Interfaces.csprojResolveAssemblyReference.cache

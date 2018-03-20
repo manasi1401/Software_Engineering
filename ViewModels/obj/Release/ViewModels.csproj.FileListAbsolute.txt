@@ -1,0 +1,12 @@
+C:\DropTables\Scheduleator\ViewModels\bin\Release\ViewModels.dll
+C:\DropTables\Scheduleator\ViewModels\bin\Release\ViewModels.pdb
+C:\DropTables\Scheduleator\ViewModels\bin\Release\Implementations.dll
+C:\DropTables\Scheduleator\ViewModels\bin\Release\Newtonsoft.Json.dll
+C:\DropTables\Scheduleator\ViewModels\bin\Release\Interfaces.dll
+C:\DropTables\Scheduleator\ViewModels\bin\Release\Implementations.pdb
+C:\DropTables\Scheduleator\ViewModels\bin\Release\Newtonsoft.Json.xml
+C:\DropTables\Scheduleator\ViewModels\bin\Release\Interfaces.pdb
+C:\DropTables\Scheduleator\ViewModels\obj\Release\ViewModels.csprojResolveAssemblyReference.cache
+C:\DropTables\Scheduleator\ViewModels\obj\Release\ViewModels.csproj.CoreCompileInputs.cache
+C:\DropTables\Scheduleator\ViewModels\obj\Release\ViewModels.dll
+C:\DropTables\Scheduleator\ViewModels\obj\Release\ViewModels.pdb

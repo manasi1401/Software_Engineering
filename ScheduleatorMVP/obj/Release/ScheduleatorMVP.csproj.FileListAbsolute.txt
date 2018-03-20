@@ -1,0 +1,16 @@
+C:\DropTables\Scheduleator\ScheduleatorMVP\bin\Release\ScheduleatorMVP.exe.config
+C:\DropTables\Scheduleator\ScheduleatorMVP\bin\Release\ScheduleatorMVP.exe
+C:\DropTables\Scheduleator\ScheduleatorMVP\bin\Release\ScheduleatorMVP.pdb
+C:\DropTables\Scheduleator\ScheduleatorMVP\bin\Release\Implementations.dll
+C:\DropTables\Scheduleator\ScheduleatorMVP\bin\Release\Interfaces.dll
+C:\DropTables\Scheduleator\ScheduleatorMVP\bin\Release\Newtonsoft.Json.dll
+C:\DropTables\Scheduleator\ScheduleatorMVP\bin\Release\ViewModels.dll
+C:\DropTables\Scheduleator\ScheduleatorMVP\bin\Release\Implementations.pdb
+C:\DropTables\Scheduleator\ScheduleatorMVP\bin\Release\Interfaces.pdb
+C:\DropTables\Scheduleator\ScheduleatorMVP\bin\Release\ViewModels.pdb
+C:\DropTables\Scheduleator\ScheduleatorMVP\bin\Release\Newtonsoft.Json.xml
+C:\DropTables\Scheduleator\ScheduleatorMVP\obj\Release\ScheduleatorMVP.csprojResolveAssemblyReference.cache
+C:\DropTables\Scheduleator\ScheduleatorMVP\obj\Release\ScheduleatorMVP.csproj.ResolveComReference.cache
+C:\DropTables\Scheduleator\ScheduleatorMVP\obj\Release\ScheduleatorMVP.csproj.CoreCompileInputs.cache
+C:\DropTables\Scheduleator\ScheduleatorMVP\obj\Release\ScheduleatorMVP.exe
+C:\DropTables\Scheduleator\ScheduleatorMVP\obj\Release\ScheduleatorMVP.pdb

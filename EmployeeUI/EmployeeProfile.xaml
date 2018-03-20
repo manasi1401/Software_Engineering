@@ -1,0 +1,83 @@
+﻿<Window x:Class="EmployeeUI.EmployeeProfile"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EmployeeUI"
+        mc:Ignorable="d"
+         WindowStartupLocation="CenterScreen"
+        Title="Profile" Height="500" Width="500">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="179*"/>
+            <ColumnDefinition Width="313*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="46*"/>
+            <RowDefinition Height="28*"/>
+            <RowDefinition Height="32*"/>
+            <RowDefinition Height="34*"/>
+            <RowDefinition Height="46*"/>
+            <RowDefinition Height="83*"/>
+        </Grid.RowDefinitions>
+        <Label  Name="lblCompanyProductName"
+                Margin="0,10,0,0"
+                Grid.Row="0"
+                Grid.Column="0"
+                Content="Scheduleator"
+                FontSize="22"
+                Foreground="Blue" Grid.RowSpan="6" Grid.ColumnSpan="2"/>
+        <Label Content="Name" 
+               HorizontalAlignment="Left" 
+               Margin="10,10,0,0" 
+               Grid.Row="1" 
+               FontSize="20"
+               VerticalAlignment="Top" Height="37" Width="63"/>
+        <Label Content="Employee ID" 
+               HorizontalAlignment="Left" 
+               Margin="10,10,0,0" 
+               Grid.Row="2" 
+               FontSize="20"
+               VerticalAlignment="Top"/>
+        <Label Name="UserName"
+                   Grid.Column="1" 
+                   HorizontalAlignment="Left" 
+                   Margin="10,0,0,0" 
+                   Grid.Row="1"
+               FontSize="20"
+                   Content="{Binding Path=Uname}" 
+                   VerticalAlignment="Top" Width="220" Height="47"/>
+        <Label Name="UserID"
+                   Grid.Column="1" 
+                   HorizontalAlignment="Left" 
+                   Margin="10,0,0,0" 
+                   Grid.Row="2" 
+               FontSize="20"
+                   Content="{Binding Path=UserId}" 
+                   VerticalAlignment="Top" Width="220" Height="56"/>
+        <Label Content="Hourly Wage" 
+               HorizontalAlignment="Left" 
+               Margin="10,10,0,0" 
+               Grid.Row="3" 
+               FontSize="20"
+               VerticalAlignment="Top"/>
+        <Label Name="Hourly_Wage"
+                   Grid.Column="1" 
+                   HorizontalAlignment="Left" 
+                   Margin="10,0,0,0" 
+                   Grid.Row="3"
+               FontSize="20"
+                   Content="{Binding Path=HourlyWage}" 
+                   VerticalAlignment="Top" Width="220" Height="47"/>
+        <Button Content="Close"
+                Click="Close_WindowButton"
+                HorizontalAlignment="Left" 
+                Margin="29,49,0,0" 
+                Grid.Row="5" 
+                FontSize="18"
+                VerticalAlignment="Top" 
+                Width="75" 
+                Grid.Column="1"/>
+
+    </Grid>
+</Window>

@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Window x:Class="Scheduleator.EditUser"
+     xmlns = "http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+   xmlns:x = "http://schemas.microsoft.com/winfx/2006/xaml"
+   xmlns:local = "using:XAMLTimePicker" 
+   xmlns:d = "http://schemas.microsoft.com/expression/blend/2008" 
+   xmlns:mc = "http://schemas.openxmlformats.org/markup-compatibility/2006"
+   mc:Ignorable = "d"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+        xmlns:forms="clr-namespace:Xamarin.Forms;assembly=Xamarin.Forms.Core"
+        Height="350" Width="400"
+         ResizeMode="NoResize"
+        Title="Add a Shift"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" MinHeight="59"/>
+            <RowDefinition Height="Auto" MinHeight="54"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="43*"/>
+            <RowDefinition Height="47*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <Label  Name="lblCompanyProductName"
+                Margin="10"
+                Grid.Row="0"
+                Grid.Column="0"
+                Content="Scheduleator"
+                FontSize="22"
+                Foreground="Blue"/>
+        <Label Name="lblUserName"
+               Content="UserName"
+               Grid.Row="1"
+               Grid.Column="0"
+               FontSize="18"
+               Margin="10"/>
+        <Label Name="lblEmployeeID"
+               Content="EmployeeID"
+               Grid.Row="2"
+               Grid.Column="0"
+               FontSize="18"
+               Margin="10"/>
+        <Label Name="lblPin"
+               Content="PIN"
+               Grid.Row="3"
+               Grid.Column="0"
+               FontSize="18"
+               Margin="10"/>
+
+        <TextBox Name="txtUserName"
+                 Grid.Row="1"
+                 Grid.Column="1"
+                 Margin="10,10,12,10"
+                 VerticalAlignment="Stretch"
+                 HorizontalAlignment="Stretch"
+                 Text="{Binding Path=UserName, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"/>
+        <TextBox Name="txtEmployeeID"
+                 Grid.Row="2"
+                 Grid.Column="1"
+                 Margin="10,10,12,10"
+                 VerticalAlignment="Stretch"
+                 HorizontalAlignment="Stretch"
+                 Text="{Binding Path=ID, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"/>
+        <TextBox Name="txtEmployeePIN"
+                 Grid.Row="3"
+                 Grid.Column="1"
+                 Margin="10,10,12,10"
+                 VerticalAlignment="Stretch"
+                 HorizontalAlignment="Stretch"
+                 Text="{Binding Path=PIN, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"/>
+        <Label Name="lblWage"
+               Content="Wage ($/hr)"
+               Grid.Row="4"
+               Grid.Column="0"
+               FontSize="18"
+               Margin="10,0"/>
+        <TextBox Name="txtHourlyWage"
+                 Grid.Row="4"
+                 Grid.Column="1"
+                 Margin="10,10,12,10"
+                 VerticalAlignment="Stretch"
+                 HorizontalAlignment="Stretch"
+                 Text="{Binding Path=HourlyWage, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"/>
+        <StackPanel Grid.Row="5"
+                    Grid.Column="1"
+                    Orientation="Horizontal"
+                    VerticalAlignment="Bottom"
+                    HorizontalAlignment="Right" Height="45" Width="200">
+
+            <Button Name="btnSaveUserProgress"
+                Content="Save"
+                Margin="10"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Bottom"
+                Width="80"
+                Height="25"
+                Click="btnSaveUserProgress_Click"
+                IsEnabled="{Binding ManagerCanSave, UpdateSourceTrigger=PropertyChanged}"/>
+            <Button Name="btnCancelButton"
+                    Content="Cancel"
+                    Margin="10"
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Bottom"
+                    Width="80"
+                    Height="25"
+                    Click="btnCancelButton_Click"/>
+
+        </StackPanel>
+    </Grid>
+</Window>

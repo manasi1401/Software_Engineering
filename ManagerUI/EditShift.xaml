@@ -1,0 +1,256 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Window x:Class="Scheduleator.EditShift"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        Height="600"
+        Width="800"
+        Title="EditShift"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="54*"/>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="54*"/>
+
+            <RowDefinition Height="54*"/>
+            <RowDefinition Height="54*"/>
+            <RowDefinition Height="37*"/>
+            <RowDefinition Height="37*"/>
+            <RowDefinition Height="37*"/>
+            <RowDefinition Height="37*"/>
+            <RowDefinition Height="37*"/>
+            <RowDefinition Height="90*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" MinWidth="162"/>
+            <ColumnDefinition Width="Auto" MinWidth="241"/>
+            <ColumnDefinition Width="Auto" MinWidth="179"/>
+            <ColumnDefinition Width="Auto" MinWidth="479"/>
+        </Grid.ColumnDefinitions>
+        <Label  Name="lblCompanyProductName"
+                Margin="10"
+                Grid.Row="0"
+                Grid.Column="0"
+                Content="Scheduleator"
+                FontSize="22"
+                Foreground="Blue"/>
+        <Label Name="ShiftId"
+               Grid.Column="0"
+               Grid.Row="1"
+               Content="Id"
+               FontSize="18" Margin="10,0,0,0" 
+               />
+        <Label Name="id"
+                 Grid.Row="1"
+                 Grid.Column="1"
+                 Content="{Binding Id}" Margin="28,10,33,0"/>
+        <Label Name="ShiftDate"
+               Grid.Column="0"
+               Grid.Row="2"
+               Content="Date"
+               FontSize="18" Margin="10,0,0,0" 
+               />
+        <DatePicker Name="Date"
+                    Height="41" 
+                  HorizontalAlignment="Center" 
+                   Margin="28,10,34,0" 
+                        VerticalAlignment="Top" 
+                    Grid.Column="1"
+                    Grid.Row="2" Width="179"
+                    SelectedDate="{Binding Date}"/>
+        <Label Name="StartTime"
+               Grid.Column="0"
+               Grid.Row="3"
+               Content="Start Time"
+               FontSize="18" Margin="10,0,0,0" 
+               />
+
+        <ComboBox Name="StartHour"
+                  Loaded="StartHour_Loaded"
+                  SelectionChanged="HourChanged"
+            Grid.Column="1"
+            Grid.Row="3" Margin="28,10,164,0" Height="39" VerticalAlignment="Top"
+            >
+        </ComboBox>
+        <Label Name="Colon"
+               Grid.Column="1"
+               Grid.Row="3"
+               Content=":"
+               FontSize="20" Margin="0,10,139,0" HorizontalAlignment="Right" Width="19" RenderTransformOrigin="-2.593,0.635" Height="56" VerticalAlignment="Top" Grid.RowSpan="2"
+               />
+
+        <ComboBox Name="StartMin"
+            Grid.Column="1"
+            Grid.Row="3" Margin="107,10,85,0"
+            Loaded="StartMinute_Loaded"
+             SelectionChanged="StartMinutesChanged" Height="39" VerticalAlignment="Top"/>
+
+        <ComboBox Name="AMPM"
+            Grid.Column="1"
+            Grid.Row="3" Margin="182,10,10,0"
+                  Loaded="AmOrPmLoaded"
+             SelectionChanged ="AmOrPmSet" Height="39" VerticalAlignment="Top"
+            />
+
+        <Label Name="EndTime"
+               Grid.Column="0"
+               Grid.Row="4"
+               Content="End Time"
+               FontSize="18" Margin="10,0,0,0" 
+               />
+
+        <ComboBox Name="EndHour"
+                  Loaded="EndHour_Loaded"
+                  SelectionChanged="EHourChanged"
+            Grid.Column="1"
+            Grid.Row="4" Margin="28,10,164,0" Height="34" VerticalAlignment="Top"
+            >
+        </ComboBox>
+
+        <Label Name="EColon"
+               Grid.Column="1"
+               Grid.Row="4"
+               Content=":"
+               FontSize="20" Margin="0,10,144,0" HorizontalAlignment="Right" Width="19" RenderTransformOrigin="-2.593,0.635" Height="51" VerticalAlignment="Top" Grid.RowSpan="2"
+               />
+        <ComboBox Name="EndMin"
+            Grid.Column="1"
+            Grid.Row="4" Margin="107,10,85,0"
+            Loaded="EndMinute_Loaded"
+             SelectionChanged="EndMinutesChanged" Height="34" VerticalAlignment="Top"/>
+        <ComboBox Name="EAMPM"
+            Grid.Column="1"
+            Grid.Row="4" Margin="182,10,10,0"
+                  Loaded="EndAmOrPmLoaded"
+             SelectionChanged ="EndAmOrPmSet" Height="34" VerticalAlignment="Top"
+            />
+        <Label Name="NumberOfCooks"
+               Content="Number of Cooks"
+               Grid.Row="5"
+               Grid.Column="0"
+               Margin="10,0,0,0" 
+               FontSize="18"/>
+        <TextBox Name="NumCooksRead"
+                 Grid.Column="1"
+                 Grid.Row="5"
+                 Text="{Binding NumberOfCooks}" Margin="28,5,33,5"/>
+        <Label Name="NumberOfDishwashers"
+               Content="Number of Dishwashers"
+               Grid.Row="6"
+               Grid.Column="0"
+               Margin="10,0,0,0" 
+               FontSize="18"/>
+        <TextBox Name="NumDishwasherRead"
+                 Grid.Column="1"
+                 Grid.Row="6"
+                 Text="{Binding NumberOfDiswashers}" Margin="28,5,33,5"/>
+        <Label Name="NumberOfManager"
+               Content="Number of Managers"
+               Grid.Row="7"
+               Grid.Column="0"
+               Margin="10,0,0,0" 
+               FontSize="18"/>
+        <TextBox Name="NumManagerRead"
+                 Grid.Column="1"
+                 Grid.Row="7"
+                 Text="{Binding NumberOfManagers}" Margin="28,5,33,5"/>
+        <Label Name="NumberOfCashier"
+               Content="Number of Cashiers"
+               Grid.Row="8"
+               Grid.Column="0"
+               Margin="10,0,0,0" 
+               FontSize="18"/>
+        <TextBox Name="NumCashierRead"
+                 Grid.Column="1"
+                 Grid.Row="8"
+                 Text="{Binding NumberOfCashiers}" Margin="28,5,33,5"/>
+        <Label Name="NumberOfWaiter"
+               Content="Number of Waiters"
+               Grid.Row="9"
+               Grid.Column="0"
+               Margin="10,0,0,0" 
+               FontSize="18"/>
+        <TextBox Name="NumWaiterRead"
+                 Grid.Column="1"
+                 Grid.Row="9"
+                 Text="{Binding NumberOfWaiters}" Margin="28,5,33,5"/>
+        <Button Name="Save"
+                Grid.Row="11"
+                Grid.Column="1"
+                Content="Save"
+                FontSize="15" Margin="29,15,0,10"
+                Click="SaveChange" HorizontalAlignment="Left" Width="177"/>
+        <Button Name="Discard"
+                Grid.Row="11"
+                Grid.Column="2"
+                Content="Discard"
+                FontSize="15"
+                Click="DiscardChange" Margin="0,16,0,9" HorizontalAlignment="Right" Width="155"/>
+        <Button Name="Deleteshift"
+                Grid.Column="0"
+                Grid.Row="11"
+                Content="Delete Shift"
+                FontSize="15"
+                Click="DeleteShift" Margin="26,16,10,10"
+                />
+        <Label Name="ListAvail"
+               Content="Available Employees"
+               Grid.Row="1"
+               Grid.Column="2"
+               FontSize="15"/>
+        <ListView Name="AvailableEmp"
+                  Grid.Column="2"
+                  Grid.Row="2"
+                  Grid.RowSpan="8"
+                  ItemsSource="{Binding AvailableEmployee}"
+                  >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Background="AliceBlue">
+
+                        <WrapPanel>
+                            <TextBlock Text="{Binding EmployeeID}"/>
+                        </WrapPanel>
+                        <WrapPanel>
+                            <TextBlock Text="{Binding UserName}"/>
+                        </WrapPanel>
+
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Label Name="ListWorking"
+               Content="Scheduled Employees"
+               Grid.Row="1"
+               Grid.Column="3"
+               FontSize="15"/>
+        <ListView Name="ScheduledEmp"
+                  Grid.Column="3"
+                  Grid.Row="2"
+                  Grid.RowSpan="8"
+                  ItemsSource="{Binding WorkingEmployees}" Margin="0,0,317,0" 
+                  >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Background="AliceBlue">
+
+                        <WrapPanel>
+                            <TextBlock Text="{Binding EmployeeID}"/>
+                        </WrapPanel>
+                        <WrapPanel>
+                            <TextBlock Text="{Binding UserName}"/>
+                        </WrapPanel>
+
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+
+
+    </Grid>
+
+
+</Window>
